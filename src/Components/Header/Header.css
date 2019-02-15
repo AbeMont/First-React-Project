@@ -2,13 +2,16 @@
   background: #0a71c6;
   color: #fff;
   text-transform: uppercase;
+  position: fixed;
+  top: -1px;
+  width: 100%;
 }
 
 .header .header__container{
   background: #0a71c6;
   color: #fff;
   text-transform: uppercase;
-  width: 75%;
+  width: 100%;
   margin: auto;
   position: relative;
   height: auto;
@@ -17,10 +20,15 @@
 .header button {
   position: relative;
   right: 0;
+  left: 40%;
   background: none;
   border: none;
   color: #fff;
-  padding: 16px 0;
+  margin: 16px 0;
+}
+
+.header button:hover {
+  cursor: pointer;
 }
 
 .header nav  {
@@ -42,6 +50,7 @@
 }
 
 .header nav ul {
+    width: 100%;
     margin: 0;
     list-style-type: none;
     display: inline-block;
@@ -52,6 +61,7 @@
     padding: 18px;
     opacity: 0.7;
     font-weight: 500;
+    border-top: 0.5px solid #fff; 
 }
 
 .header nav ul li:hover{

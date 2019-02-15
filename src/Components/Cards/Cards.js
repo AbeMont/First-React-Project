@@ -1,6 +1,6 @@
 import React from 'react';
 import Img from './../../img/frontend-icon.svg';
-import './Cards.css'
+import './Cards.css';
 
 export default class Card extends React.Component {
 
@@ -8,47 +8,50 @@ export default class Card extends React.Component {
         cards: [
             {
                 key: 1,
-                img: { Img },
-                title: "Card 1",
-                skills: []
+                img:  Img ,
+                title: "HTML",
+                skills: ['HTML 5','Web Components','Bootstrap']
             },
             {
                 key: 2,
-                img: { Img },
-                title: "Card 2",
-                skills: []
+                img:  Img ,
+                title: "CSS",
+                skills: ['SASS','BEM', 'CSS Animations']
             },
             {
                 key: 3,
-                img: { Img },
-                title: "Card 3",
-                skills: []
+                img:  Img ,
+                title: "Javascript",
+                skills: ['ES6','AJAX','RESTful APIs']
             }
         ]
     }
 
     render(){
-        const cards = this.state.cards.map(card => 
+        const cards = this.state.cards.map(card =>
 
-            <div className="card">
-                <div className="card__container">
-                    <div className="card__Img">
-                        <img src={card.img} />
-                    </div>
-                    <div className="card__list">
-                        <h3> {card.title} </h3>
-                        <ul>
-                            <li>Html</li>
-                            <li>Css</li>
-                            <li>Javascript</li>
-                        </ul>
+           
+                <div key={card.key} className="card">
+                    <div className="card__container">
+                        <div className="card__Img">
+                            <img src={card.img} />
+                        </div>
+                        <div className="card__list">
+                            <h3> {card.title} </h3>
+                            <ul>
+                                {(
+                                    card.skills.map((skill,index)=>{
+                                        return <li key={index}>{skill}</li>
+                                    })
+                                )}
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-
+          
         )
         return (
-            <div>
+            <div className="skills__cards">
                 {cards}
             </div>
         )

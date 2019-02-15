@@ -1,6 +1,7 @@
 import React from 'react';
 import './Banner.css'
 import ProfilePic from './../../img/me2.jpg';
+import PDF from'./../../img/abraham-resume.pdf';
 
 export default class Banner extends React.Component {
 
@@ -16,7 +17,7 @@ export default class Banner extends React.Component {
                     <p>
                         I am a Level II Front-end UI Developer. My work centers around building responsive web components for Brand-Specific libraries and coding websites utilizing these components. I specialize in Html5, Css3, and JavaScript. Clean code is my signature.
                     </p>
-                    <button> Hire Me </button>
+                    <a href={PDF} target="_blank"> Resume </a>
                 </div>
             </section>
         )

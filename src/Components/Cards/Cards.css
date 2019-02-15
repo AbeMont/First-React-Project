@@ -14,7 +14,8 @@
     padding: 16px;
     border-radius: 50px;
     position: absolute;
-    background: #41A4F5;
+    /* background: #41A4F5; */
+    background: #6610f2;
     top: -35px;
     left: 50%;
     transform: translateX(-50%);
