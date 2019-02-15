@@ -1,0 +1,41 @@
+section.banner {
+  background-color: #41A4F5;
+  color: #fff;
+  padding: 3rem 0;
+}
+
+section.banner .banner__img img {
+  border-radius: 100px;
+  width:150px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+section.banner .banner__desc .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+section.banner .banner__desc {
+    width: 80%;
+    margin: auto;
+}
+
+section.banner .banner__desc h1 {
+    font-size: 2rem;
+}
+
+section.banner button {
+  padding: 16px;
+  min-width: 250px;
+  max-width: 450px;;
+  background: rgb(0,0,0,0.2);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  margin: 24px 0 0 0;
+}
+section.banner button:hover {
+  background: rgb(43, 100, 145);
+  cursor: pointer;
+}

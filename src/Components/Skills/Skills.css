@@ -1,0 +1,48 @@
+.skills {
+    background: #f1f1f1;
+    padding: 56px 0;
+}
+
+.skills__container {
+    width: 80%;
+    margin: auto;
+}
+
+.skills__cards {
+    padding: 32px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills h1,h2,h3{
+    margin: 0;
+}
+
+.skills a {
+    text-decoration: none;
+    color: #41A4F5;
+}
+
+.skills a:hover {
+    text-decoration: underline;
+}
+
+.skills p {
+    color: #58677c;
+}
+
+@media (min-width: 750px) {
+
+    .skills__cards {
+        flex-direction: row;
+    }
+
+    .skills__cards .card {
+        flex: 1;
+    }
+
+    .skills__cards .card:nth-child(2){
+        padding: 0 16px;;
+    }
+
+}
