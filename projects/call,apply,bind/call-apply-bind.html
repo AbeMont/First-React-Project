@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        console.log("Call,Apply,Bind");
+
+        ///////////////////////////////////////////////////
+        // The call() method calls a function with a given 
+        //'this' value and arguments provided individually.
+        ////////////////////////////////////////////////
+
+        var john = {
+            name: "john",
+            age: 28,
+            job: 'Dev',
+            greeting: function(style,timeOfday){
+                if(style === 'formal'){
+                    console.log(`Good ${timeOfday} ladies and Gents, my name is ${this.name}, my age is ${this.age} years old, I work as a ${this.job}`);
+                } else if (style === 'friendly'){
+                    console.log(`Hey there! I'm ${this.name}, im ${this.age} years old, I work as a ${this.job}!`);
+                }
+            }
+        }
+
+        var jill = {
+            name: "Jill",
+            age: 23,
+            job: 'Desinger'
+        };
+
+        john.greeting('formal','morning');
+
+        // 'this' will now refer to jill and needs to be passed as the first parameter. 
+        //  then we pass in our remaining parameters
+        john.greeting.call(jill,'friendly','afternoon');
+
+        // THIS IS WHAT WE REFER TO AS METHOD BORROWING
+
+
+        //////////////////////////////////////////////
+        // apply() accepts the parameters as an array.
+        //////////////////////////////////////////////
+
+        john.greeting.apply(jill,['formal','morning']);
+
+        /////////////////////////////////////////////////
+        // bind() also lets change our 'this', but 
+        // bind does not immediately invokes the function
+        // but generates a copy of a function
+        ////////////////////////////////////////////////
+
+        // We make a copy of the function
+        var getGreeting = john.greeting;
+
+        // We reference our copied function to jillgreeting
+        // and instead of invoking, we set its parameters.
+        var jillGreeting = getGreeting.bind(jill,'formal','afternoon');
+
+        // We invoke our greeting
+        jillGreeting();
+
+        ////////////////////
+        // Object scoping
+        //////////////////
+
+        var obj = {
+            name: "Abraham",
+            dob:1990,
+            occupation: "Dev",
+            greeting: function(){
+                return (`Hi i'm ${this.name}, my age is ${this.getAge()}`);
+            },
+            getAge: function(){
+                return 2018 - this.dob;
+            },
+            data: {
+                hobby: "the gym",
+                continueGreet: function(){
+                    var getGreet = obj.greeting;
+                    var greetbind = getGreet.bind(obj);
+                    return greetbind() + `, and my hobby is ${this.hobby}`;
+                }
+            }
+        }
+
+        console.log(obj.greeting());
+        console.log(obj.data.continueGreet());
+
+    </script>
+</body>
+</html>

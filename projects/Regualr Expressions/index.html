@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Regular Expressions</title>
+</head>
+<body>
+    <script>
+        
+        // Our string
+        let myString = "Hello, World!";
+        // We create our regex
+        let myRegex = /Hello/;
+        // This will check strictly for Hello on the string
+        let result = myRegex.test(myString);
+        // A boolean is returned 
+        console.log(result);
+
+        // (i) - is a regex flag that ignores case
+        let myString1 = "Hello World";
+        let myRegex1 = /hello/i;
+        let result1 = myString1.match(myRegex1)[0];
+        console.log(result1); // Will still return the initial "Hello"
+
+        // (g) - To search or extract a pattern more than once, you can use the g flag.
+        let twinkleStar = "Twinkle, twinkle, Twinkle, little star";
+        let myRegex2 = /twinkle/gi;
+        let result2 = twinkleStar.match(myRegex2);
+        console.log(result2); // will return all patterns ["Twinkle", "twinkle", "Twinkle"];
+
+        // (.) will match any one character
+        let exampleStr = "Let's have Fun with regular expressions!";
+        let exampleStr2 = "HoneyBun is alot of fun! Right hun?";
+        let unRegex = /.un/i; // with cases ignoreed
+        let unRegex2 = /.un/gi; // with ALL the possible characters
+        let result3 = unRegex.test(exampleStr);
+        let result3_2 = exampleStr.match(unRegex);
+        let result3_3 = exampleStr2.match(unRegex);
+        let result3_4 = exampleStr2.match(unRegex2);
+        console.log(result3);
+        console.log(result3_2);
+        console.log(result3_3);
+        console.log(result3_4);
+
+        // Character Classes ([]) - allow you to define a group of characters you wish to match
+        let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+        let vowelRegex = /[aeiou]/gi;
+        let result4 = quoteSample.match(vowelRegex);
+        console.log(result4); // This returns an array with ALL the vowles in the string
+
+        // Character Sets (-) -  you can define a range of characters to match
+
+        let quoteSample2 = "The quick brown fox jumps over the lazy dog.";
+        let catStr = "I want a cat";
+        let batStr = "bat";
+        let alphabetRegex = /[a-g]/gi; // We set a range
+        let animalReg = /[a-z]at/gi; // we can also set a range for the first letter
+        let result5 = quoteSample2.match(alphabetRegex);
+        let cat = catStr.match(animalReg);
+        let bat = batStr.match(animalReg);
+        console.log(result5); // this returns an array of ALL the characters between a & g.
+        console.log(cat);
+        console.log(bat);
+
+        let abe1 = "Abe";
+        let abe2 = "abe";
+        let regEx = /abe/i;
+        console.log(regEx.test(abe1));
+        console.log(regEx.test(abe2));
+
+    </script>
+</body>
+</html>
