@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import './Header.css'
+import './Header.css';
+import { NavLink } from 'react-router-dom';
 
 export default class Header extends React.Component {
 
@@ -9,34 +9,38 @@ export default class Header extends React.Component {
     }
 
     toggleMenu = () => {
-        console.log("toggle");
         this.setState({
             showMobileMenu: !this.state.showMobileMenu
         })
     }
 
     render(){
-        console.log(this.state.showMobileMenu)
+        // console.log(this.state.showMobileMenu)
         return (
             <header className="header">
                 <div className="header__container">
                     <button onClick={this.toggleMenu}><i className="fas fa-bars"></i></button>
                     <nav className={this.state.showMobileMenu ? "active" : null
                     }>
+
                         <ul>
-                            <li>
-                                {/* <Link to="/">About</Link> */}
-                                About
+                            <li> 
+                                <NavLink exact to="/">
+                                    About
+                                </NavLink> 
                             </li>
-                            <li>
-                                {/* <Link to="/">Projects</Link> */}
-                                Projects
+                            <li> 
+                                <NavLink exact to="/projects">
+                                    Projects
+                                </NavLink>
                             </li>
-                            <li>
-                                {/* <Link to="/">Contact</Link> */}
-                                Contact
+                            <li> 
+                                <NavLink exact to="/contact">
+                                    Contact
+                                </NavLink> 
                             </li>
                         </ul>
+
                     </nav>
                 </div>
             </header>

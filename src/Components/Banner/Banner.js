@@ -17,7 +17,7 @@ export default class Banner extends React.Component {
                     <p>
                         With 4 years of experience developing User Interfaces and creating reusable components, quality is the objective, learning something new is the fun part. As a new opportunity approaches, a new adventure waits!
                     </p>
-                    <a href={PDF} target="_blank"> Resume </a>
+                    <a href={PDF} target="_blank" rel="noopener noreferrer"> Resume </a>
                 </div>
             </section>
         )

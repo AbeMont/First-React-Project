@@ -8,6 +8,7 @@
     max-width: 350px;
     position: relative;
     margin: auto;
+    height: 100%;
 }
 
 .card__Img {

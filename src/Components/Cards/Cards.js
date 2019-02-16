@@ -11,18 +11,21 @@ export default class Card extends React.Component {
                 key: 1,
                 img:  Img ,
                 title: "HTML",
-                skills: ['HTML 5','Web Components','Bootstrap']
+                altText: "dev icon",
+                skills: ['HTML 5','Custom Web Components','Bootstrap']
             },
             {
                 key: 2,
                 img:  Img ,
                 title: "CSS",
+                altText: "dev icon",
                 skills: ['SASS','BEM', 'CSS Animations']
             },
             {
                 key: 3,
                 img:  Img ,
                 title: "Javascript",
+                altText: "dev icon",
                 skills: ['ES6','AJAX','RESTful APIs']
             }
         ]
@@ -35,7 +38,7 @@ export default class Card extends React.Component {
                 <div key={card.key} className="card">
                     <div className="card__container">
                         <div className="card__Img">
-                            <img src={card.img} />
+                            <img src={card.img} alt={card.altText} />
                         </div>
                         <div className="card__list">
                             <h3> {card.title} </h3>
