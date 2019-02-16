@@ -15,7 +15,7 @@ export default class Banner extends React.Component {
                     <p className="lead">Hello. my name is </p>
                     <h1>Abraham Montoya</h1>
                     <p>
-                        I am a Level II Front-end UI Developer. My work centers around building responsive web components for Brand-Specific libraries and coding websites utilizing these components. I specialize in Html5, Css3, and JavaScript. Clean code is my signature.
+                        With 4 years of experience developing User Interfaces and creating reusable components, quality is the objective, learning something new is the fun part. As a new opportunity approaches, a new adventure waits!
                     </p>
                     <a href={PDF} target="_blank"> Resume </a>
                 </div>

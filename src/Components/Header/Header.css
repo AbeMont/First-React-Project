@@ -5,6 +5,7 @@
   position: fixed;
   top: -1px;
   width: 100%;
+  z-index: 9999;
 }
 
 .header .header__container{

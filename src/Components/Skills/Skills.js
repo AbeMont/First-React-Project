@@ -12,9 +12,10 @@ export default class Skills extends React.Component {
                     <div className="skills__desc">
                         <h1>Skills Overview</h1>
                         <p>
-                            I have more than 8 years' experience building rich web applications for clients all over the world. Below is a quick overview of my main technical skill sets and tools I use. Want to find out more about my experience?
+                            I am a Level II Frontend UI Developer. My work centers around building responsive web components
+                            for Brand - Specific libraries and coding websites utilizing these components. I specialize in Html5, Css3, and JavaScript. Clean code is my signature.
                     </p>
-                    
+
                     </div>
                 
                         <Card></Card>
