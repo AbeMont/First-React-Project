@@ -1,5 +1,6 @@
 import React from 'react';
 import Img from './../../img/frontend-icon.svg';
+//import html from './../../img/icons/html5.svg'
 import './Cards.css';
 
 export default class Card extends React.Component {

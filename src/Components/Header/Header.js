@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './Header.css'
 
 export default class Header extends React.Component {
@@ -23,9 +24,18 @@ export default class Header extends React.Component {
                     <nav className={this.state.showMobileMenu ? "active" : null
                     }>
                         <ul>
-                            <li>About</li>
-                            <li>Projects</li>
-                            <li>Contact</li>
+                            <li>
+                                {/* <Link to="/">About</Link> */}
+                                About
+                            </li>
+                            <li>
+                                {/* <Link to="/">Projects</Link> */}
+                                Projects
+                            </li>
+                            <li>
+                                {/* <Link to="/">Contact</Link> */}
+                                Contact
+                            </li>
                         </ul>
                     </nav>
                 </div>

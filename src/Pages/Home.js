@@ -7,7 +7,6 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <Header></Header>
                 <Banner></Banner>
                 <Skills></Skills>  
             </div>   
