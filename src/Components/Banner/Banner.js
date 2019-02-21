@@ -9,7 +9,7 @@ export default class Banner extends React.Component {
         return (
             <section className="banner"> 
                 <div className="banner__img">
-                    <img src={ProfilePic} alt="" />
+                    <img src={ProfilePic} alt="Profile" />
                 </div>
                 <div className="banner__desc">
                     <p className="lead">Hello. my name is </p>

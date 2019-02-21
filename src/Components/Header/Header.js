@@ -19,6 +19,9 @@ export default class Header extends React.Component {
         return (
             <header className="header">
                 <div className="header__container">
+                <div className="header__logo">
+                    <h2>&lt;abrahamCodes/&gt;</h2>
+                </div>
                     <button onClick={this.toggleMenu}><i className="fas fa-bars"></i></button>
                     <nav className={this.state.showMobileMenu ? "active" : null
                     }>

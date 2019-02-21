@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, HashRouter ,Link } from "react-router-dom";
 import Home from './Pages/Home';
 import Projects from './Pages/Projects';
 import Contact from './Pages/Contact';
@@ -8,7 +8,7 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <Router>
+      <HashRouter>
         <div>
 
           <Route exact={true} path='/' render={() => (
@@ -30,7 +30,7 @@ class App extends Component {
           )}/>
 
         </div>
-      </Router>
+      </HashRouter>
     );
   }
 }

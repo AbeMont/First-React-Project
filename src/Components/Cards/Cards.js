@@ -34,7 +34,9 @@ export default class Card extends React.Component {
     render(){
         const cards = this.state.cards.map(card =>
 
-           
+      
+
+            
                 <div key={card.key} className="card">
                     <div className="card__container">
                         <div className="card__Img">
@@ -52,11 +54,15 @@ export default class Card extends React.Component {
                         </div>
                     </div>
                 </div>
+
+     
           
         )
         return (
             <div className="skills__cards">
-                {cards}
+              
+                    {cards}
+         
             </div>
         )
     }

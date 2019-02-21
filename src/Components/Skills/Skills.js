@@ -16,10 +16,8 @@ export default class Skills extends React.Component {
                             for Brand - Specific libraries and coding websites utilizing these components. I specialize in Html5, Css3, and JavaScript. Clean code is my signature.
                     </p>
 
-                    </div>
-                
-                        <Card></Card>
-                    
+                    </div>     
+                        <Card></Card>                   
                 </div>
             </section>
         )

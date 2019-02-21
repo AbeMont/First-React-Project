@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
+import Header from "./../Components/Header/Header";
 import Banner from '../Components/Banner/Banner';
 import Skills from '../Components/Skills/Skills';
-import Header from "./../Components/Header/Header";
+import BannerReact from '../Components/Banner/Banner-react';
 
 class Home extends Component {
     render() {
         return (
             <div>
                 <Header/>
-                <Banner></Banner>
-                <Skills></Skills>  
+                <Banner/>
+                <Skills/> 
+                <BannerReact/>
             </div>   
         );
     }

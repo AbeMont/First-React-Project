@@ -6,7 +6,8 @@ export default class Contact extends React.Component {
         return (
             <div>
                 <Header />
-                <h1 style={{marginTop:86}}>Contact Page!</h1>
+                <h1 style={{marginTop:86}}>Contact Page</h1>
+                <h2>Working on it...</h2>
             </div>
         )
     }
