@@ -19,7 +19,7 @@ export default class Tabs extends React.Component {
                 },
                 {
                     id: "button-3",
-                    buttonText: "CSS",
+                    buttonText: "CSS Animations",
                     value:"css"
                 },
                 {
@@ -71,6 +71,19 @@ export default class Tabs extends React.Component {
                 },
             ]
         }
+    }
+
+    componentWillUnmount() {
+        console.log("unmount")
+    }
+
+    componentWillMount(){
+        console.log("mount")
+    }
+
+    componentDidUpdate(){
+        console.log("component Updated");
+        return " show";
     }
 
     btnHandler = (event)=> {
@@ -132,7 +145,9 @@ export default class Tabs extends React.Component {
                     </nav>
                 </div>
 
-                <div className={"Tabs__panels"}>
+                <div className = {
+                    "Tabs__panels" + this.componentDidUpdate()
+                }>
 
                     {
                         this.state.panel.cards.map((card,index)=>{
@@ -140,7 +155,7 @@ export default class Tabs extends React.Component {
                                 
                                 card.showCard ? 
                                 
-                                <Link to="#" className="Tab__panel show" key={index}>
+                                <Link to="#" className={"Tab__panel show"} key={index}>
                                     <div className="Tab__panel-img">
                                         <img src={card.img} alt="Placeholder" />
                                     </div>
